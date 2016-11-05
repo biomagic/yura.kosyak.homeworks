@@ -1,0 +1,6 @@
+D:\AltexSoft\hw\1\Altex_Soft_Week_1_task_2\Altex_Soft_Week_1_task_2\bin\Debug\Altex_Soft_Week_1_task_2.exe.config
+D:\AltexSoft\hw\1\Altex_Soft_Week_1_task_2\Altex_Soft_Week_1_task_2\bin\Debug\Altex_Soft_Week_1_task_2.exe
+D:\AltexSoft\hw\1\Altex_Soft_Week_1_task_2\Altex_Soft_Week_1_task_2\bin\Debug\Altex_Soft_Week_1_task_2.pdb
+D:\AltexSoft\hw\1\Altex_Soft_Week_1_task_2\Altex_Soft_Week_1_task_2\obj\Debug\Altex_Soft_Week_1_task_2.exe
+D:\AltexSoft\hw\1\Altex_Soft_Week_1_task_2\Altex_Soft_Week_1_task_2\obj\Debug\Altex_Soft_Week_1_task_2.pdb
+D:\AltexSoft\hw\1\Altex_Soft_Week_1_task_2\Altex_Soft_Week_1_task_2\obj\Debug\Altex_Soft_Week_1_task_2.csprojResolveAssemblyReference.cache
