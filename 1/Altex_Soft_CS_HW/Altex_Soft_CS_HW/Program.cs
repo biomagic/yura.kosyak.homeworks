@@ -11,15 +11,27 @@ namespace Altex_Soft_CS_HW
 
       StudentsSort stud = new StudentsSort();
 
-      stud.Fill(2);
+      //stud.Fill(2);
 
       // Task 2.3, 2.4 (Array sort)
 
       var aSort = new ArraySort();
 
-      aSort.Sorted(3, 4);
+      //aSort.Sorted(3, 4);
+
+      //Console.ReadLine();
+
+      // Task 3.1
+
+      TextFormat textClass = new TextFormat();
+      textClass.Text();
+
+      // Task 4
+
+
 
       Console.ReadLine();
+
     }
   }
 }
