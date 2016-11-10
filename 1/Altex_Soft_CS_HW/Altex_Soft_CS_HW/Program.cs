@@ -28,7 +28,9 @@ namespace Altex_Soft_CS_HW
 
       // Task 4
 
+      SomeObjects pl = new SomeObjects();
 
+      pl.Run();
 
       Console.ReadLine();
 

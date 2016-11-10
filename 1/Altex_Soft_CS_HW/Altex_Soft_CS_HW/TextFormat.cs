@@ -91,9 +91,6 @@ namespace Altex_Soft_CS_HW
       {
         Console.WriteLine(item.Name);
       }
-      Console.ReadLine();
-
-
     }
   }
 }
