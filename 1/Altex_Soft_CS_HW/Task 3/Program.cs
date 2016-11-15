@@ -4,13 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AltexSoft_HW_2
+namespace Task_3
 {
   class Program
   {
-    static void Main()
+    static void Main(string[] args)
     {
-
+      TextFormat textClass = new TextFormat();
+      textClass.Text();
+      Console.ReadLine();
     }
   }
 }

@@ -3,7 +3,7 @@ using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace Altex_Soft_CS_HW
+namespace Task_3
 {
   internal class TextFormat
   {
@@ -12,7 +12,7 @@ namespace Altex_Soft_CS_HW
       var text = File.ReadAllText(@"D:\AltexSoft\hw\altex_soft_31.txt");
       var pattern = @"-?[0-9]+(,|.)[0-9]+";
 
-      Display(text);
+      Console.WriteLine(Display(text));
 
       // Task 3.1  
 
@@ -22,10 +22,9 @@ namespace Altex_Soft_CS_HW
 
       Squaring();
     }
-    private void Display(string str)
+    private string Display(string str)
     {
-      Console.WriteLine();
-      Console.WriteLine("Contents of txt file is:\n{0}", str);
+      return "\n-----------------\n" + str;
     }
     private void Format(string text, string pattern)
     {
@@ -36,10 +35,10 @@ namespace Altex_Soft_CS_HW
       foreach (Match matches in Regex.Matches(text, pattern, RegexOptions.IgnoreCase))
       {
         sum += Convert.ToSingle(matches.Value.Replace(".", ","));
-        Display(matches.Value);
+        Console.WriteLine(Display(matches.Value));
       }
 
-      Display("\n" + sum);
+      Console.WriteLine(Display("\n" + sum));
     }
     private void Squaring()
     {
@@ -67,17 +66,17 @@ namespace Altex_Soft_CS_HW
         }
       }
 
-      Display("\nFile Before:\n\n" + File.ReadAllText(path));
+      Console.WriteLine(Display("\nFile Before:\n\n" + File.ReadAllText(path)));
 
       File.WriteAllText(path, temp, Encoding.UTF8);
       
-      Display("\nFile after:\n\n" + File.ReadAllText(path));
+      Console.WriteLine(Display("\nFile after:\n\n" + File.ReadAllText(path)));
 
 
       // Показать список каталогов
 
       DirectoryInfo dir = new DirectoryInfo(@"D:\AltexSoft\hw\");
-      Display("\n++++++++++++ Folders list ++++++++++++\n");
+      Console.WriteLine(Display("\n++++++++++++ Folders list ++++++++++++\n"));
       foreach (var item in dir.GetDirectories())
       {
         Console.WriteLine(item.Name);
@@ -86,7 +85,7 @@ namespace Altex_Soft_CS_HW
           Console.WriteLine(subItem.Name);
         Console.WriteLine();
       }
-      Display("\n++++++++++++ Files list ++++++++++++\n");
+      Console.WriteLine(Display("\n++++++++++++ Files list ++++++++++++\n"));
       foreach (var item in dir.GetFiles())
       {
         Console.WriteLine(item.Name);

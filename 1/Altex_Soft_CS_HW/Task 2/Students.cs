@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Altex_Soft_CS_HW
+namespace Task_2
 {
 
   struct Student : IComparable
@@ -43,8 +38,6 @@ namespace Altex_Soft_CS_HW
 
       foreach (var stud in students)
         Console.WriteLine("First Name: {0} Age: {1}", stud.firstName,  stud.age);
-
-      Console.ReadLine();
     }
   }
 }

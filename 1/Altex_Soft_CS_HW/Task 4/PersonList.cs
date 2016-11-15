@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Net.Configuration;
 
-namespace Altex_Soft_CS_HW
+namespace Task_4
 {
   internal class SomeObjects
   {
     public void Run()
     {
-      // 4.1 list
       var studList = new List<ObjectItem>
       {
         new ObjectItem

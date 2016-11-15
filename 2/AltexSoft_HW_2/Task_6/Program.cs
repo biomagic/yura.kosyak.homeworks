@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AltexSoft_HW_2
+namespace Task_6
 {
-  class Test
+  class Program
   {
+    static void Main(string[] args)
+    {
+    }
   }
 }

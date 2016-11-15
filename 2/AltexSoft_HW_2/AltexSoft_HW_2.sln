@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AltexSoft_HW_2", "AltexSoft_HW_2\AltexSoft_HW_2.csproj", "{BA00EEC8-0AB9-4F60-BF8E-C733C4D3F1C6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task 5", "Task 5\Task 5.csproj", "{9707570A-801F-4709-8C24-AA54FA53E2A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task_6", "Task_6\Task_6.csproj", "{9E352FD9-E8A3-4AB6-B9E9-7D754B5A133F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BA00EEC8-0AB9-4F60-BF8E-C733C4D3F1C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BA00EEC8-0AB9-4F60-BF8E-C733C4D3F1C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BA00EEC8-0AB9-4F60-BF8E-C733C4D3F1C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BA00EEC8-0AB9-4F60-BF8E-C733C4D3F1C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9707570A-801F-4709-8C24-AA54FA53E2A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9707570A-801F-4709-8C24-AA54FA53E2A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9707570A-801F-4709-8C24-AA54FA53E2A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9707570A-801F-4709-8C24-AA54FA53E2A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E352FD9-E8A3-4AB6-B9E9-7D754B5A133F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E352FD9-E8A3-4AB6-B9E9-7D754B5A133F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E352FD9-E8A3-4AB6-B9E9-7D754B5A133F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E352FD9-E8A3-4AB6-B9E9-7D754B5A133F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

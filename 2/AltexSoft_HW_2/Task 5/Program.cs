@@ -4,13 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AltexSoft_HW_2
+namespace Task_5
 {
   class Program
   {
-    static void Main()
+    static void Main(string[] args)
     {
-
+      Hierarchy hClass = new Hierarchy();
+      hClass.Run();
+      Console.ReadLine();
     }
   }
 }

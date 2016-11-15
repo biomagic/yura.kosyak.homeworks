@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Altex_Soft_CS_HW
+namespace Task_2
 {
   internal class ArraySort
   {
