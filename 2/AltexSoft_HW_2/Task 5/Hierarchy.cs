@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 namespace Task_5
 {
+  
   public class Hierarchy
   {
+    
     public void Run()
     {
+
       var personList = new List<Person>
       {
         new Person
@@ -34,7 +38,7 @@ namespace Task_5
           firstName = "Nikolay",
           lastName = "Makedonskiy",
           age = 25,
-          Group = Group.ks2
+          Group = Group.ks4
         },
         new Student
         {
@@ -48,7 +52,7 @@ namespace Task_5
           firstName = "Maksim",
           lastName = "Zaycev",
           age = 23,
-          Group = Group.ks4
+          Group = Group.ks2
         },
         new Teacher
         {
@@ -80,34 +84,60 @@ namespace Task_5
         }
       };
 
-      // View all list elements
 
       foreach (var p in personList)
-        Console.WriteLine(p.Print());
+      Console.WriteLine(p.Print());
 
       // Random person testing
 
       Console.WriteLine(Person.RandomPerson(personList).Print());
       Console.WriteLine(Teacher.RandomTeacher(personList).Print());
       Console.WriteLine(Student.RandomStudent(personList).Print());
-      
       // static Massive
 
       object[] objList = {personList}; // Must be static
 
+      Console.WriteLine("--------------After sorting----------------");
+      // 12.2
+      List<Student> studentList = new List<Student>();
+
+      foreach (var p in personList)
+      {
+        if (p.GetType() == typeof(Student))
+        {
+          studentList.Add((Student) p);
+        }
+      }
+
+      var studentArray = studentList.ToArray();
+      Array.Sort(studentArray);
+
+      foreach (var p in studentArray)
+        Console.WriteLine(p.Print());
+      // 12.3
+      Student s = new Student();
+      Student.StudentComparer stud = new Student.StudentComparer(studentArray, Student.SortBy.Group);
+      Array.Sort(studentArray, stud);
+
+      foreach (var p in studentArray)
+        Console.WriteLine(p.Print());
     }
   }
 
-  internal class Person : ICloneable
+  internal class Person : ICloneable, IPrintable
   {
     public string firstName;
     public string lastName;
     public int age;
-    private static Person[] personArr;
+    
 
     public virtual string Print()
     {
       return "\nPerson: \n\nName: " + firstName + ", Last name: " + lastName + ", Age: " + age + "\n";
+    }
+    void IPrintable.Print()
+    {
+      Console.WriteLine("\n!!!!!!!!!!!!!!IPrintble Person: \n\nName: " + firstName + ", Last name: " + lastName + ", Age: " + age + "\n");
     }
 
     public virtual object Clone()
@@ -129,13 +159,14 @@ namespace Task_5
       {
         if (p.GetType() != typeof(Teacher) && p.GetType() != typeof(Student))
         {
+          IPrintable print = p;
+          print.Print();
           personList.Add(p);
         }
-        
       }
       Console.WriteLine("-------\nPersons on course: {0}\n", personList.Count);
 
-      personArr = personList.ToArray();
+      var personArr = personList.ToArray();
 
       Console.WriteLine("\nRandom person:\n");
 
@@ -161,7 +192,7 @@ namespace Task_5
   internal class Teacher : Person
   {
     public string specialty;
-    private static Person[] teacherArr;
+    
     public override string Print()
     {
       return "\nTeacher:\n\nName: " + firstName + ", Last Name: " + lastName + ", Age: " + age + ", Speciality: " +
@@ -183,7 +214,7 @@ namespace Task_5
     {
       List<Person> teacherList = new List<Person>();
       var rand = new Random();
-      
+
       foreach (var p in person)
       {
         if (p.GetType() == typeof(Teacher))
@@ -194,7 +225,7 @@ namespace Task_5
       }
       Console.WriteLine("-------\nTeachers on course: {0}\n", teacherList.Count);
 
-      teacherArr = teacherList.ToArray();
+      var teacherArr = teacherList.ToArray();
 
       Console.WriteLine("\nRandom teacher:\n");
 
@@ -217,14 +248,37 @@ namespace Task_5
     }
   }
 
-  internal class Student : Teacher
+  internal class Student : Person, IPrintable, IComparable<Student>
   {
     public Group Group;
-    private static Person[] studentArr;
+
+    
+    public static object SortByName { get { return SortBy.firstName; } }
+    public static object SortByLName { get { return SortBy.lastName; } }
+    public static object SortByAge { get { return SortBy.age; } }
+    public static object SortByGroup { get { return SortBy.Group; } }
+
+    public int CompareTo(Student obj)
+    {
+      if (this.Group > obj.Group)
+      {
+        return 1;
+      } else if (this.Group < obj.Group)
+      {
+        return -1;
+      }
+      else
+        return 0;
+    }
 
     public override string Print()
     {
       return "\nStudent:\n\nName: " + firstName + ", Last Name: " + lastName + ", Age: " + age + ", Group: " + Group + "\n";
+    }
+
+    void IPrintable.Print()
+    {
+      Console.WriteLine("\n!!!!!!!!!!!! IPrintable Student:\n\nName: " + firstName + ", Last Name: " + lastName + ", Age: " + age + ", Group: " + Group + "\n");
     }
 
     public override object Clone()
@@ -248,9 +302,9 @@ namespace Task_5
       {
         if (p.GetType() == typeof(Student))
         {
-          
+          IPrintable print = p;
+          print.Print();
           studentList.Add(p);
-          
         }
       }
 
@@ -258,7 +312,7 @@ namespace Task_5
 
       Console.WriteLine("\nRandom student:\n");
 
-      studentArr = studentList.ToArray();
+      var studentArr = studentList.ToArray();
 
       return studentArr[rand.Next(0, studentArr.Length)];
     }
@@ -277,6 +331,52 @@ namespace Task_5
     {
       return base.GetHashCode();
     }
+
+    public class StudentComparer : IComparer<Student>
+    {
+      private static SortBy _property;
+      private Student[] studentList;
+      public StudentComparer(Student[] sList, SortBy p)
+      {
+       studentList = sList;
+        _property = p;
+      }
+
+      public void Method()
+      {
+        Console.WriteLine(" ++++++++++++++++++++++++++ HI");
+      }
+
+
+      public int Compare(Student x, Student y)
+      {
+        if (_property == SortBy.firstName && x.firstName.CompareTo(y.firstName) != 0)
+        {
+          return x.firstName.CompareTo(y.firstName);
+        }
+        if (_property == SortBy.lastName && x.lastName.CompareTo(y.lastName) != 0)
+        {
+          return x.lastName.CompareTo(y.lastName);
+        }
+        if (_property == SortBy.age && x.age.CompareTo(y.age) != 0)
+        {
+          return x.age.CompareTo(y.age);
+        }
+        if (_property == SortBy.Group && x.Group.CompareTo(y.Group) != 0)
+        {
+          return x.Group.CompareTo(y.Group);
+        }
+          return 0;
+      }
+    }
+
+    public enum SortBy
+    {
+      firstName,
+      lastName,
+      age,
+      Group
+    }
   }
 
   internal enum Group
@@ -286,6 +386,11 @@ namespace Task_5
     ks3 = 3,
     ks4 = 4,
     ks5 = 5
+  }
+
+  interface IPrintable
+  {
+    void Print();
   }
 
 }
