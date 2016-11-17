@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
@@ -121,15 +122,49 @@ namespace Task_5
 
       foreach (var p in studentArray)
         Console.WriteLine(p.Print());
+
+      // 12.4
+
+      Student somePerson = new Student();
+      Student clonePerson = (Student)somePerson.Clone();
+      somePerson.Group = Group.ks1;
+      clonePerson.Group = Group.ks2;
+      Console.WriteLine(somePerson.Print());
+      Console.WriteLine(clonePerson.Print());
+      
+      // 12.5 test 
+
+      using (Person p = new Person())
+      {
+        p.firstName = "Brayan";
+        Console.WriteLine(p.firstName);
+      }
+
+      // 12.6 test
+
+      foreach (var person in personList)
+      {
+        
+      }
+
     }
   }
 
-  internal class Person : ICloneable, IPrintable
+  internal class Person : ICloneable, IPrintable, IDisposable
   {
     public string firstName;
     public string lastName;
     public int age;
-    
+
+    // 12.6 IEnumerable
+
+
+    //12.5 Dispose
+
+    public void Dispose()
+    {
+      Console.WriteLine("HI! I'm dispose method in Person class");
+    }
 
     public virtual string Print()
     {
@@ -139,7 +174,7 @@ namespace Task_5
     {
       Console.WriteLine("\n!!!!!!!!!!!!!!IPrintble Person: \n\nName: " + firstName + ", Last name: " + lastName + ", Age: " + age + "\n");
     }
-
+    
     public virtual object Clone()
     {
       return new Person
@@ -180,12 +215,12 @@ namespace Task_5
 
     public override bool Equals(object obj)
     {
-      return base.Equals(obj);
+      return base.Equals(obj) && obj.GetType() == typeof(Person);
     }
 
     public override int GetHashCode()
     {
-      return base.GetHashCode();
+      return base.GetHashCode() + 50;
     }
   }
 
@@ -239,12 +274,12 @@ namespace Task_5
 
     public override bool Equals(object obj)
     {
-      return base.Equals(obj);
+      return base.Equals(obj) && obj != typeof(Int32);
     }
 
     public override int GetHashCode()
     {
-      return base.GetHashCode();
+      return base.GetHashCode() + 123;
     }
   }
 
@@ -324,12 +359,12 @@ namespace Task_5
 
     public override bool Equals(object obj)
     {
-      return base.Equals(obj);
+      return base.Equals(obj) && obj != typeof(string);
     }
 
     public override int GetHashCode()
     {
-      return base.GetHashCode();
+      return Int32.MaxValue - base.GetHashCode();
     }
 
     public class StudentComparer : IComparer<Student>
