@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("AltexSoft_HW_2")]
+[assembly: AssemblyTitle("Task 9")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("AltexSoft_HW_2")]
+[assembly: AssemblyProduct("Task 9")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("ba00eec8-0ab9-4f60-bf8e-c733c4d3f1c6")]
+[assembly: Guid("e68241b5-e779-4955-b45b-46f4412ed794")]
 
 // Version information for an assembly consists of the following four values:
 //
