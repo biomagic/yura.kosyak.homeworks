@@ -6,166 +6,47 @@ using System.Runtime.InteropServices;
 
 namespace Task_5
 {
-  
-  public class Hierarchy
-  {
-    
-    public void Run()
-    {
-
-      var personList = new List<Person>
-      {
-        new Person
-        {
-          firstName = "Person1",
-          lastName = "Person1",
-          age = 20
-        },
-        new Person
-        {
-          firstName = "Person2",
-          lastName = "Person2",
-          age = 25
-        },
-        new Student
-        {
-          firstName = "Andrey",
-          lastName = "Shegulin",
-          age = 20,
-          Group = Group.ks1
-        },
-        new Student
-        {
-          firstName = "Nikolay",
-          lastName = "Makedonskiy",
-          age = 25,
-          Group = Group.ks4
-        },
-        new Student
-        {
-          firstName = "Vasiliy",
-          lastName = "Merenov",
-          age = 21,
-          Group = Group.ks3
-        },
-        new Student
-        {
-          firstName = "Maksim",
-          lastName = "Zaycev",
-          age = 23,
-          Group = Group.ks2
-        },
-        new Teacher
-        {
-          firstName = "Viktor",
-          lastName = "Nikolaevich",
-          age = 45,
-          specialty = "Mathemathic"
-        },
-        new Teacher
-        {
-          firstName = "Andrey",
-          lastName = "Viktorovich",
-          age = 48,
-          specialty = "History"
-        },
-        new Teacher
-        {
-          firstName = "Olga",
-          lastName = "Michaylovna",
-          age = 59,
-          specialty = "Programming"
-        },
-        new Teacher
-        {
-          firstName = "Oleg",
-          lastName = "Viktorovich",
-          age = 35,
-          specialty = "Polytology"
-        }
-      };
-
-
-      foreach (var p in personList)
-      Console.WriteLine(p.Print());
-
-      // Random person testing
-
-      Console.WriteLine(Person.RandomPerson(personList).Print());
-      Console.WriteLine(Teacher.RandomTeacher(personList).Print());
-      Console.WriteLine(Student.RandomStudent(personList).Print());
-      // static Massive
-
-      object[] objList = {personList}; // Must be static
-
-      Console.WriteLine("--------------After sorting----------------");
-      // 12.2
-      List<Student> studentList = new List<Student>();
-
-      foreach (var p in personList)
-      {
-        if (p.GetType() == typeof(Student))
-        {
-          studentList.Add((Student) p);
-        }
-      }
-
-      var studentArray = studentList.ToArray();
-      Array.Sort(studentArray);
-
-      foreach (var p in studentArray)
-        Console.WriteLine(p.Print());
-      // 12.3
-      Student s = new Student();
-      Student.StudentComparer stud = new Student.StudentComparer(studentArray, Student.SortBy.Group);
-      Array.Sort(studentArray, stud);
-
-      foreach (var p in studentArray)
-        Console.WriteLine(p.Print());
-
-      // 12.4
-
-      Student somePerson = new Student();
-      Student clonePerson = (Student)somePerson.Clone();
-      somePerson.Group = Group.ks1;
-      clonePerson.Group = Group.ks2;
-      Console.WriteLine(somePerson.Print());
-      Console.WriteLine(clonePerson.Print());
-      
-      // 12.5 test 
-
-      using (Person p = new Person())
-      {
-        p.firstName = "Brayan";
-        Console.WriteLine(p.firstName);
-      }
-
-      // 12.6 test
-
-      foreach (var person in personList)
-      {
-        
-      }
-
-    }
-  }
-
-  internal class Person : ICloneable, IPrintable, IDisposable
+  public class Person : ICloneable, IPrintable, IDisposable
   {
     public string firstName;
     public string lastName;
     public int age;
+    
+    public Person() { }
 
-    // 12.6 IEnumerable
+    public Person(string firstName, string lastName, int age)
+    {
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.age = age;
+    }
 
+    // 11.1 Operators overloading
 
-    //12.5 Dispose
+      // Overload operator ==
+
+    public static bool operator ==(Person p1, Person p2)
+    {
+      if ((p1.firstName == p2.lastName) && (p1.lastName == p2.lastName) && (p1.age == p2.age))
+        return true;
+      return false;
+    }
+
+    // Overload operator !=
+
+    public static bool operator !=(Person p1, Person p2)
+    {
+      if ((p1.firstName != p2.firstName) || (p1.lastName != p2.lastName) || (p1.age != p2.age))
+        return true;
+      return false;
+    }
+
+    // 12.5 Dispose
 
     public void Dispose()
     {
-      Console.WriteLine("HI! I'm dispose method in Person class");
+      Console.WriteLine("Person disposed...");
     }
-
     public virtual string Print()
     {
       return "\nPerson: \n\nName: " + firstName + ", Last name: " + lastName + ", Age: " + age + "\n";
@@ -174,7 +55,6 @@ namespace Task_5
     {
       Console.WriteLine("\n!!!!!!!!!!!!!!IPrintble Person: \n\nName: " + firstName + ", Last name: " + lastName + ", Age: " + age + "\n");
     }
-    
     public virtual object Clone()
     {
       return new Person
@@ -184,7 +64,6 @@ namespace Task_5
         age = age
       };
     }
-
     public static Person RandomPerson(List<Person> person)
     {
       List<Person> personList = new List<Person>();
@@ -207,17 +86,14 @@ namespace Task_5
 
       return personArr[rand.Next(0, personArr.Length)];
     }
-
     public override string ToString()
     {
       return "\nPerson's ToString\n";
     }
-
     public override bool Equals(object obj)
     {
       return base.Equals(obj) && obj.GetType() == typeof(Person);
     }
-
     public override int GetHashCode()
     {
       return base.GetHashCode() + 50;
@@ -426,6 +302,85 @@ namespace Task_5
   interface IPrintable
   {
     void Print();
+  }
+
+  public class PList
+  {
+    public List<Person> ShowList()
+    {
+      var personList = new List<Person>
+      {
+        new Person
+        {
+          firstName = "Person1",
+          lastName = "Person1",
+          age = 20
+        },
+        new Person
+        {
+          firstName = "Person2",
+          lastName = "Person2",
+          age = 25
+        },
+        new Student
+        {
+          firstName = "Andrey",
+          lastName = "Shegulin",
+          age = 20,
+          Group = Group.ks1
+        },
+        new Student
+        {
+          firstName = "Nikolay",
+          lastName = "Makedonskiy",
+          age = 25,
+          Group = Group.ks4
+        },
+        new Student
+        {
+          firstName = "Vasiliy",
+          lastName = "Merenov",
+          age = 21,
+          Group = Group.ks3
+        },
+        new Student
+        {
+          firstName = "Maksim",
+          lastName = "Zaycev",
+          age = 23,
+          Group = Group.ks2
+        },
+        new Teacher
+        {
+          firstName = "Viktor",
+          lastName = "Nikolaevich",
+          age = 45,
+          specialty = "Mathemathic"
+        },
+        new Teacher
+        {
+          firstName = "Andrey",
+          lastName = "Viktorovich",
+          age = 48,
+          specialty = "History"
+        },
+        new Teacher
+        {
+          firstName = "Olga",
+          lastName = "Michaylovna",
+          age = 59,
+          specialty = "Programming"
+        },
+        new Teacher
+        {
+          firstName = "Oleg",
+          lastName = "Viktorovich",
+          age = 35,
+          specialty = "Polytology"
+        }
+      };
+      return personList;
+    }
   }
 
 }

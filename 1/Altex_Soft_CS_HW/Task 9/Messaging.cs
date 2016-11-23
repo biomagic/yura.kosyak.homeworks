@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Task_9
 {
@@ -66,7 +62,6 @@ namespace Task_9
       {
         Console.WriteLine("\n -- " + Name + "\n");
         Console.WriteLine("\"" + phrase[args.EventEnum] + "\"");
-        Console.WriteLine(args.EventEnum);
       }
     }
   }
@@ -79,7 +74,6 @@ namespace Task_9
       {
         Console.WriteLine("\n -- " + Name + "\n");
         Console.WriteLine("\"" + phrase[args.EventEnum] + "\"");
-        Console.WriteLine(args.EventEnum);
       }
     }
   }
