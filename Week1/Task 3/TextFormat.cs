@@ -9,7 +9,7 @@ namespace Task_3
   {
     public void Text()
     {
-      var text = File.ReadAllText(@"D:\AltexSoft\hw\altex_soft_31.txt");
+      var text = File.ReadAllText(@"../../altex_soft_31.txt");
       var pattern = @"-?[0-9]+(,|.)[0-9]+";
 
       Console.WriteLine(Display(text));
@@ -42,7 +42,7 @@ namespace Task_3
     }
     private void Squaring()
     {
-      string path = @"D:\AltexSoft\hw\altex_soft_task32.txt";
+      string path = @"../../altex_soft_task32.txt";
       string pattern = @"[0-9]+";
       string values = "1 2 3 4 5 6 7 8 9 10";
       string temp = "";
@@ -75,7 +75,7 @@ namespace Task_3
 
       // Показать список каталогов
 
-      DirectoryInfo dir = new DirectoryInfo(@"D:\AltexSoft\hw\");
+      DirectoryInfo dir = new DirectoryInfo(@"../../");
       Console.WriteLine(Display("\n++++++++++++ Folders list ++++++++++++\n"));
       foreach (var item in dir.GetDirectories())
       {

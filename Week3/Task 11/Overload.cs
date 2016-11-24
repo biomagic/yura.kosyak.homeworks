@@ -20,7 +20,7 @@ namespace Task_11
     }
 
     // Overloading operator ==
-
+    
     public static bool operator ==(Complex com1, Complex com2)
     {
       if ((com1.X == com2.X) && (com1.Y == com2.Y) && (com1.Z == com2.Z))
@@ -47,7 +47,7 @@ namespace Task_11
 
     public override string ToString()
     {
-      return base.ToString() + "10";
+      return base.ToString();
     }
 
     public override bool Equals(object obj)
