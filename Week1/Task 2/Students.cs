@@ -10,6 +10,7 @@ namespace Task_2
 
     public void Reg()
     {
+      Console.CursorSize = 100;
       Console.WriteLine("Name: ");
       firstName = Convert.ToString(Console.ReadLine());
       Console.WriteLine("Age: ");

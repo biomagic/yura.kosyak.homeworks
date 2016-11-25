@@ -4,10 +4,12 @@ namespace Task_2
 {
   internal class ArraySort
   {
+
     // One dimension massive process
 
     public void Sorted(int n)
     {
+      Console.ForegroundColor = ConsoleColor.DarkGreen;
       var arr = new int[n];
 
       Fill(arr);
@@ -23,7 +25,7 @@ namespace Task_2
       // View sorted array
 
       Console.WriteLine();
-      WriteMessage("Array after sorting");
+      Display("Array after sorting");
 
       Display(arr);
     }
@@ -32,6 +34,7 @@ namespace Task_2
 
     public void Sorted(int n, int m)
     {
+      
       var nn = n - 1;
       var mm = m - 1; // for columns cycle
       var sum = new int[m];
@@ -45,8 +48,8 @@ namespace Task_2
 
       // Calc sum of columns
 
-      WriteMessage("Sum of columns");
-
+      Display("Sum of columns");
+      Console.ForegroundColor = ConsoleColor.White;
       for (var i = 0; i <= mm; i++) // iterate column's loop
       {
         for (var j = 0; j <= nn; j++) // iterate row's loop
@@ -62,11 +65,11 @@ namespace Task_2
 
       // View sorted array
 
-      WriteMessage("Massive values after sort");
+      Display("Massive values after sort");
 
       Display(arr, nn, mm);
 
-      WriteMessage("Sum of columns");
+      Display("Sum of columns");
 
       Display(sum);
     }
@@ -82,10 +85,7 @@ namespace Task_2
       for (var i = 0; i <= arr.Length - 1; i++)
         arr[i] = rand.Next(-500, 500);
 
-      Console.WriteLine();
-      Console.WriteLine("Massive filled");
-      Console.WriteLine();
-
+      Display("Massive filled");
     }
 
     // Two dimension massive fillig
@@ -99,18 +99,23 @@ namespace Task_2
       for (var i = 0; i <= nn; i++)
         for (var j = 0; j <= mm; j++)
           arr[i, j] = rand.Next(-500, 500);
-
-      Console.WriteLine();
-      Console.WriteLine("Massive filled");
-      Console.WriteLine();
+      
+      Display("Massive filled");
+    }
+    private static void Display(string msg)
+    {
+      Console.ForegroundColor = ConsoleColor.DarkGreen;
+      Console.WriteLine("\n" + msg + "\n");
     }
 
     // One dimension massive display
 
     private static void Display(int[] arr)
     {
+      Console.ForegroundColor = ConsoleColor.White;
       for (var i = 0; i <= arr.Length - 1; i++)
         Console.Write("{0} | ", arr[i]);
+      Console.WriteLine();
     }
 
     // Two dimension massive fillig
@@ -121,6 +126,7 @@ namespace Task_2
       {
         for (var j = 0; j <= mm; j++) // iterate column's loop 
         {
+          Console.ForegroundColor = ConsoleColor.White;
           Console.Write("{0} | ", arr[i, j]);
         }
         Console.WriteLine();
@@ -154,15 +160,7 @@ namespace Task_2
         Console.WriteLine("You have some exception while sum array: {0}", ex);
       }
     }
-    
-    // Write message
 
-    private static void WriteMessage(string msg)
-    {
-      Console.WriteLine();
-      Console.WriteLine(msg);
-      Console.WriteLine();
-    }
   }
 }
 

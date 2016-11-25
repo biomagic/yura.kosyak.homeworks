@@ -150,7 +150,7 @@ namespace Task_5
 
     public override bool Equals(object obj)
     {
-      return base.Equals(obj) && obj != typeof(Int32);
+      return base.Equals(obj) && obj != typeof(int); // Warning ?
     }
 
     public override int GetHashCode()
