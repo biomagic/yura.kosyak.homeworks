@@ -37,7 +37,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. LINQ", "1. LINQ", "{B2B0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. EntityFramework", "2. EntityFramework", "{D2A55365-0E76-49DE-9AB1-AB378324AA32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQProject", "LINQProject\LINQProject.csproj", "{3E822F93-A21A-4861-9D18-9648CE69CD14}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQProject", "Week5\LINQProject\LINQProject.csproj", "{3E822F93-A21A-4861-9D18-9648CE69CD14}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

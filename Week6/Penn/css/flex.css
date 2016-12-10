@@ -1,0 +1,164 @@
+.df {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.asfe {
+    align-self: flex-end;
+    -ms-flex-item-align: end;
+}
+
+.asfs {
+    align-self: flex-start;
+    -ms-flex-item-align: start;
+}
+
+.ascent {
+    align-self: center;
+    -ms-flex-item-align: center;
+}
+
+.wrap {
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+}
+
+.df-fdcol {
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+}
+
+.df-fdcol-aicenter {
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -ms-flex-align: center;
+    -ms-flex-direction: column;
+}
+
+.df-fdcol-aife {
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    -ms-flex-align: end;
+    -ms-flex-direction: column;
+}
+
+.df-fdcol-jccent {
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    -ms-flex-pack: justify;
+    -ms-flex-direction: column;
+}
+
+.df-fdcol-jcsb {
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    -ms-flex-pack: justify;
+    -ms-flex-direction: column;
+}
+
+.df-fdcol-jcsa {
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    -ms-flex-pack: distribute;
+    -ms-flex-direction: column;
+}
+
+.df-fdcol-jcsa-aife {
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    -ms-flex-align: end;
+    -ms-flex-pack: distribute;
+    -ms-flex-direction: column;
+}
+
+.df-jccent {
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    -ms-flex-pack: center;
+}
+
+.df-jcsa {
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-around;
+    -ms-flex-pack: distribute;
+}
+
+.df-jcsb {
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    -ms-flex-pack: justify;
+}
+
+.df-jccent-aicenter {
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+}
+
+.df-jccent-fe {
+    display: -ms-flexbox;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    -ms-flex-align: end;
+    -ms-flex-align: flex-end;
+    -ms-flex-pack: center;
+}
+
+.df-jcsa-aicenter {
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    -ms-flex-align: center;
+    -ms-flex-pack: distribute;
+    -ms-flex-pack: justify;
+}
+
+.df-jcsb-aicenter {
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    -ms-flex-pack: justify;
+}
+
+.df-jcsb-asfstart {
+    display: -ms-flexbox;
+     display: flex; 
+    align-self: flex-start;
+     justify-content: space-between; 
+    -ms-flex-pack: justify;
+    -ms-flex-item-align: start;
+    -ms-flex-item-align: flex-start;
+}
+
+
+.df-aicenter {
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    -ms-flex-align: center;
+}

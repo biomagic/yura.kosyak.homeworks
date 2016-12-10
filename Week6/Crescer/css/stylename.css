@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'MetaPlusBookRoman';
+    font-style: normal;
+    font-weight: normal;
+
+    src: url('../fonts/MetaPlusBookRoman.eot');
+    src: url('../fonts/MetaPlusBookRoman.eot?#iefix')format('embedded-opentype'),
+    url('../fonts/MetaPlusBookRoman.woff') format('woff'),
+    url('../fonts/MetaPlusBookRoman.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'MetaPlusBoldRoman';
+    font-style: bold;
+    font-weight: bold;
+
+    src: url('../fonts/MetaPlusBoldRoman.eot');
+    src: url('../fonts/MetaPlusBoldRoman.eot?#iefix')format('embedded-opentype'),
+    url('../fonts/MetaPlusBoldRoman.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'ArialMonospacedMT';
+    font-style: normal;
+    font-weight: normal;
+
+    src: url('../fonts/ArialMonospacedMT.eot');
+    src: url('../fonts/ArialMonospacedMT.eot?#iefix')format('embedded-opentype'),
+    url('../fonts/ArialMonospacedMT.ttf') format('truetype');
+}

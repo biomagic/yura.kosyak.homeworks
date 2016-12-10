@@ -17,9 +17,7 @@ namespace LINQProject
     public static void Result()
     {
       var numbers = Enumerable.Range(1, N).Aggregate((sum, next) => sum * next);
-
       Console.WriteLine(numbers);
-      
     }
   }
 }
