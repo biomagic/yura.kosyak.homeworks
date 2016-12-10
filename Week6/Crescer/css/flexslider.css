@@ -51,6 +51,7 @@
 }
 div.flexslider {
   border-radius: 7px;
+  padding: 0;
 }
 .flex-active-slide {
   max-width: 613px;
