@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Crescer</title>
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/flex.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/stylename.css">
     <!-- Flexslider styles -->
     <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
-
 </head>
 
 <body class="body" id="top">
     <div class="logo">
         <div class="logo__top-line"></div>
         <div class="logo__block">
+            <div class="hamburger-block"></div>
             <div class="logo__text">
                 <a href="#" class="logo__link">
                     <span class="logo logo-text_blue">crescer</span><span class="logo logo-text_orange">aprendendo</span><span class="logo logo-text_blue">.org<span class="sign">®</span></span>
@@ -68,19 +68,22 @@
             <div class="flexslider df-fdcol">
                 <ul class="slides">
                     <li>
-                        <img src="images/slider-img.jpg" alt="flexslider-image">
+                        <div class="video-frame">
+                            <video id="myVideo" src="video/tish.mp4" height="100%" width="100%"></video>
+                            <button id="playBtn">Play</button>
+                        </div>
                     </li>
                     <li>
-                        <img src="images/slider-img.jpg" alt="flexslider-image">
+                        <img src="img/slider-img.jpg" alt="flexslider-image">
                     </li>
                     <li>
-                        <img src="images/slider-img.jpg" alt="flexslider-image">
+                        <img src="img/slider-img.jpg" alt="flexslider-image">
                     </li>
                     <li>
-                        <img src="images/slider-img.jpg" alt="flexslider-image">
+                        <img src="img/slider-img.jpg" alt="flexslider-image">
                     </li>
                     <li>
-                        <img src="images/slider-img.jpg" alt="flexslider-image">
+                        <img src="img/slider-img.jpg" alt="flexslider-image">
                     </li>
                 </ul>
             </div>
@@ -88,7 +91,7 @@
             <div class="articles-box df-jcsb">
                 <a href="#" class="article__link">
                     <figure class="article">
-                        <img class="article__img" src="images/article-img1.jpg" alt="article-img1">
+                        <img class="article__img" src="img/article-img1.jpg" alt="article-img1">
                         <figcaption class="article-fcaption">Vestibulum massa nisl, auctor in dictum at, gravida a arcu
                             <p class="article__p">Etiam adipiscing ornare quam vitae scelerisque. Proin dapibus fringilla arcu, eu molestie mi lobortis eu.</p>
                         </figcaption>
@@ -96,7 +99,7 @@
                 </a>
                 <a href="#" class="article__link">
                     <figure class="article">
-                        <img class="article__img" src="images/article-img2.jpg" alt="article-img2">
+                        <img class="article__img" src="img/article-img2.jpg" alt="article-img2">
                         <figcaption class="article-fcaption">Praesent lobortis ornare nisi non cursus. Nulla at gravida est
                             <p class="article__p">Donec iaculis interdum leo sit amet tincidunt. Cras fringilla sodales turpis sed adipiscing.</p>
                         </figcaption>
@@ -107,7 +110,7 @@
                 <div class="news-box">
                     <a href="#" class="news__link df-jcsb">
                         <figure class="news__fig df-jcsb">
-                            <img src="images/news-img1.jpg" alt="news-image1" class="news__img">
+                            <img src="img/news-img1.jpg" alt="news-image1" class="news__img">
                             <figcaption class="news__fcaption">
                                 <h3 class="news__h3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum</h3>
                                 <p class="news__p">Maecenas sagittis odio felis, id pharetra quam. Maecenas orci nisi, pulvinar id accumsan ac, adipiscing vitae purus. Praesent nec nulla id magna lobortis vestibulum.</p>
@@ -118,7 +121,7 @@
                 <div class="news-box">
                     <a href="#" class="news__link df-jcsb">
                         <figure class="news__fig df-jcsb">
-                            <img src="images/news-img2.jpg" alt="news-image2" class="news__img">
+                            <img src="img/news-img2.jpg" alt="news-image2" class="news__img">
                             <figcaption class="news__fcaption">
                                 <h3 class="news__h3">Vestibulum massa nisl, auctor in dictum at, gravida a arcu. Pellentesque vitae massa tincidunt nisi consequat</h3>
                                 <p class="news__p">Etiam adipiscing ornare quam vitae scelerisque. Proin dapibus fringilla arcu, eu molestie mi lobortis eu.</p>
@@ -129,7 +132,7 @@
                 <div class="news-box">
                     <a href="#" class="news__link df-jcsb">
                         <figure class="news__fig df-jcsb">
-                            <img src="images/news-img3.jpg" alt="news-image3" class="news__img">
+                            <img src="img/news-img3.jpg" alt="news-image3" class="news__img">
                             <figcaption class="news__fcaption">
                                 <h3 class="news__h3">Praesent lobortis ornare nisi non cursus. Nulla at gravida est. Integer ut nunc quam</h3>
                                 <p class="news__p">Donec iaculis interdum leo sit amet tincidunt. Cras fringilla sodales turpis sed adipiscing. Donec nec ante nunc, ut commodo odio. Nulla et facilisis nisl. Integer vel velit felis.</p>
@@ -263,7 +266,7 @@
         </div>
     </div>
     <footer class="footer df-fdcol">
-        <div class="footer__logo"></div>
+        <div class="footer__logo"><img src="img/footer-logo.png" alt="footer-logo" class="footer__img"></div>
         <div class="wrapper clearfix">
             <div class="footer__block col-1">
                 <h3 class="footer__header">Home</h3>
@@ -333,40 +336,17 @@
             <a href="#top"><span></span></a>
         </p>
     </footer>
-    <!-- jQuery -->
+    <!-- Scripts -->
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+
     <!-- FlexSlider -->
     <script defer src="js/jquery.flexslider.js"></script>
-
     <script type="text/javascript">
         $(window).load(function() {
             $('.flexslider').flexslider({
-                animation: "slide"
-            });
-        });
-    </script>
-    <!-- Button up -->
-    <script>
-        $(document).ready(function() {
-            // hide #back-top first
-            $("#back-top").hide();
-
-            // fade in #back-top
-            $(function() {
-                $(window).scroll(function() {
-                    if ($(this).scrollTop() > 100) {
-                        $('#back-top').fadeIn();
-                    } else {
-                        $('#back-top').fadeOut();
-                    }
-                });
-                // scroll body to 0px on click
-                $('#back-top a').click(function() {
-                    $('body,html').animate({
-                        scrollTop: 0
-                    }, 800);
-                    return false;
-                });
+                slideshow: false
             });
         });
     </script>

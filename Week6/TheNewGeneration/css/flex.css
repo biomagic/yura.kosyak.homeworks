@@ -93,6 +93,13 @@
     -ms-flex-pack: center;
 }
 
+.df-jcfe {
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: flex-end;
+    -ms-flex-pack: flex-end;
+}
+
 .df-jcsa {
     display: -ms-flexbox;
     display: flex;

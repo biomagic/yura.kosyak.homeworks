@@ -1,9 +1,10 @@
 .flexslider {
-  height: 300px;
+  max-height: 300px;
   position: relative;
   overflow: hidden;
   z-index: 1;
   left: -1px;
+  background: #eee;
 }
 .flex-direction-nav a {
   display: none;
@@ -11,11 +12,11 @@
 .flex-control-nav {
   position: absolute;
   text-align: center;
-  bottom: 0px;
+  bottom: 0;
   background: rgba(0, 0, 0, .5);
   display: flex;
   align-self: center;
-  padding: 14px 50px 13px 50px;
+  padding: 14px 50px 13px;
   border-top-right-radius: 20px;
   z-index: 2;
   border-top-left-radius: 20px;
@@ -55,4 +56,18 @@ div.flexslider {
 }
 .flex-active-slide {
   max-width: 613px;
+}
+
+@media (max-width: 480px) {
+    .flex-control-nav {
+      padding: 8px 50px;
+      bottom: 2px;
+    }
+    .flex-control-nav li {
+      margin: 0 12px;
+    }
+    .flex-control-paging li a {
+        width: 15px;
+        height: 15px;
+    }
 }

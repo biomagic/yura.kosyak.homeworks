@@ -239,4 +239,10 @@ ModelManifest.xml
 .paket/paket.exe
 
 # FAKE - F# Make
-.fake/
+.fake.
+
+# Grunt files
+
+package.json
+Gruntfile.js
+node_modules

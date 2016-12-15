@@ -64,6 +64,10 @@ body {
 	float: left;
 	position: relative;
 }
+.top__link {
+	color: #774520;
+	position: relative;
+}
 .top__li:first-child {
 	margin-right: 18px;
 }
@@ -84,10 +88,6 @@ body {
 }
 .top__li:last-child:after {
 	box-shadow: none;
-}
-.top__link {
-	color: #774520;
-	position: relative;
 }
 input[type="search"]:focus {
     box-shadow: 0 0 8px 0 rgba(182, 67, 1, .8), inset 1px 1px 0px 0px rgba(0, 0, 0, 0.3);
