@@ -13,10 +13,10 @@
 </head>
 
 <body class="body" id="top">
-    <div class="logo">
+    <header class="logo">
         <div class="logo__top-line"></div>
         <div class="logo__block">
-            <div class="hamburger-block"></div>
+            <div class="hamburger-block menuicon"><span></span></div>
             <div class="logo__text">
                 <a href="#" class="logo__link">
                     <span class="logo logo-text_blue">crescer</span><span class="logo logo-text_orange">aprendendo</span><span class="logo logo-text_blue">.org<span class="sign">®</span></span>
@@ -28,7 +28,7 @@
 				</span>
             </div>
         </div>
-    </div>
+    </header>
     <nav class="navigation">
         <ul class="navigation__menu">
             <li class="navigation__li"><a href="#" class="navigation__link">Home</a>
@@ -63,13 +63,13 @@
             </li>
         </ul>
     </nav>
-    <div class="main df-jcsb">
-        <div class="main__left-side df-fdcol-jcsb">
+    <main class="main df-jcsb">
+        <aside class="aside-left df-fdcol-jcsb">
             <div class="flexslider df-fdcol">
                 <ul class="slides">
                     <li>
                         <div class="video-frame">
-                            <video id="myVideo" src="video/tish.mp4" height="100%" width="100%"></video>
+                            <video id="myVideo" class="my-video" src="video/tish.mp4"></video>
                             <button id="playBtn">Play</button>
                         </div>
                     </li>
@@ -88,84 +88,88 @@
                 </ul>
             </div>
             <h1 class="color-header color-header_dark-blue">Destaques</h1>
-            <div class="articles-box df-jcsb">
-                <a href="#" class="article__link">
-                    <figure class="article">
-                        <img class="article__img" src="img/article-img1.jpg" alt="article-img1">
-                        <figcaption class="article-fcaption">Vestibulum massa nisl, auctor in dictum at, gravida a arcu
-                            <p class="article__p">Etiam adipiscing ornare quam vitae scelerisque. Proin dapibus fringilla arcu, eu molestie mi lobortis eu.</p>
-                        </figcaption>
-                    </figure>
-                </a>
-                <a href="#" class="article__link">
-                    <figure class="article">
-                        <img class="article__img" src="img/article-img2.jpg" alt="article-img2">
-                        <figcaption class="article-fcaption">Praesent lobortis ornare nisi non cursus. Nulla at gravida est
-                            <p class="article__p">Donec iaculis interdum leo sit amet tincidunt. Cras fringilla sodales turpis sed adipiscing.</p>
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-            <div class="news df-fdcol-jcsa">
-                <div class="news-box">
-                    <a href="#" class="news__link df-jcsb">
-                        <figure class="news__fig df-jcsb">
-                            <img src="img/news-img1.jpg" alt="news-image1" class="news__img">
-                            <figcaption class="news__fcaption">
-                                <h3 class="news__h3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum</h3>
-                                <p class="news__p">Maecenas sagittis odio felis, id pharetra quam. Maecenas orci nisi, pulvinar id accumsan ac, adipiscing vitae purus. Praesent nec nulla id magna lobortis vestibulum.</p>
+            <article class="articles-v df-jcsb">
+                <section class="articles-v-section">
+                    <a href="#" class="articles__link">
+                        <figure class="articles-v__figure">
+                            <img class="articles-v__img" src="img/article-img1.jpg" alt="article-img1">
+                            <figcaption class="articles-v__fcaption">Vestibulum massa nisl, auctor in dictum at, gravida a arcu
+                                <p class="articles-v__p">Etiam adipiscing ornare quam vitae scelerisque. Proin dapibus fringilla arcu, eu molestie mi lobortis eu.</p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </section>
+                <section class="articles-v-section">
+                    <a href="#" class="articles__link">
+                        <figure class="articles-v__figure">
+                            <img class="articles-v__img" src="img/article-img2.jpg" alt="article-img2">
+                            <figcaption class="articles-v__fcaption">Praesent lobortis ornare nisi non cursus. Nulla at gravida est
+                                <p class="articles-v__p">Donec iaculis interdum leo sit amet tincidunt. Cras fringilla sodales turpis sed adipiscing.</p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </section>
+            </article>
+            <article class="articles-h df-fdcol-jcsa">
+                <div class="articles-h-box">
+                    <a href="#" class="articles-h__link df-jcsb">
+                        <figure class="articles-h__fig df-jcsb">
+                            <img src="img/news-img1.jpg" alt="news-image1" class="articles-h__img">
+                            <figcaption class="articles-h__fcaption">
+                                <h3 class="articles-h__h3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum</h3>
+                                <p class="articles-h__p">Maecenas sagittis odio felis, id pharetra quam. Maecenas orci nisi, pulvinar id accumsan ac, adipiscing vitae purus. Praesent nec nulla id magna lobortis vestibulum.</p>
                             </figcaption>
                         </figure>
                     </a>
                 </div>
-                <div class="news-box">
-                    <a href="#" class="news__link df-jcsb">
-                        <figure class="news__fig df-jcsb">
-                            <img src="img/news-img2.jpg" alt="news-image2" class="news__img">
-                            <figcaption class="news__fcaption">
-                                <h3 class="news__h3">Vestibulum massa nisl, auctor in dictum at, gravida a arcu. Pellentesque vitae massa tincidunt nisi consequat</h3>
-                                <p class="news__p">Etiam adipiscing ornare quam vitae scelerisque. Proin dapibus fringilla arcu, eu molestie mi lobortis eu.</p>
+                <div class="articles-h-box">
+                    <a href="#" class="articles-h__link df-jcsb">
+                        <figure class="articles-h__fig df-jcsb">
+                            <img src="img/news-img2.jpg" alt="news-image2" class="articles-h__img">
+                            <figcaption class="articles-h__fcaption">
+                                <h3 class="articles-h__h3">Vestibulum massa nisl, auctor in dictum at, gravida a arcu. Pellentesque vitae massa tincidunt nisi consequat</h3>
+                                <p class="articles-h__p">Etiam adipiscing ornare quam vitae scelerisque. Proin dapibus fringilla arcu, eu molestie mi lobortis eu.</p>
                             </figcaption>
                         </figure>
                     </a>
                 </div>
-                <div class="news-box">
-                    <a href="#" class="news__link df-jcsb">
-                        <figure class="news__fig df-jcsb">
-                            <img src="img/news-img3.jpg" alt="news-image3" class="news__img">
-                            <figcaption class="news__fcaption">
-                                <h3 class="news__h3">Praesent lobortis ornare nisi non cursus. Nulla at gravida est. Integer ut nunc quam</h3>
-                                <p class="news__p">Donec iaculis interdum leo sit amet tincidunt. Cras fringilla sodales turpis sed adipiscing. Donec nec ante nunc, ut commodo odio. Nulla et facilisis nisl. Integer vel velit felis.</p>
+                <div class="articles-h-box">
+                    <a href="#" class="articles-h__link df-jcsb">
+                        <figure class="articles-h__fig df-jcsb">
+                            <img src="img/news-img3.jpg" alt="news-image3" class="articles-h__img">
+                            <figcaption class="articles-h__fcaption">
+                                <h3 class="articles-h__h3">Praesent lobortis ornare nisi non cursus. Nulla at gravida est. Integer ut nunc quam</h3>
+                                <p class="articles-h__p">Donec iaculis interdum leo sit amet tincidunt. Cras fringilla sodales turpis sed adipiscing. Donec nec ante nunc, ut commodo odio. Nulla et facilisis nisl. Integer vel velit felis.</p>
                             </figcaption>
                         </figure>
                     </a>
                 </div>
-            </div>
-            <div class="control">
+            </article>
+            <div class="controls">
                 <div class="link-group df">
-                    <a href="#" class="control__link">
+                    <a href="#" class="controls__link">
                         <span class="link-group__image link-group__text_bg-pos1"></span>
                         <span class="link-group__text">IMPRIMIR</span>
                     </a>
-                    <a href="#" class="control__link">
+                    <a href="#" class="controls__link">
                         <span class="link-group__image link-group__text_bg-pos2"></span>
                         <span class="link-group__text">COMPARTILHAR CONTEÚDO</span>
                     </a>
-                    <a href="#" class="control__link">
+                    <a href="#" class="controls__link">
                         <span class="link-group__image link-group__text_bg-pos3"></span>
                         <span class="link-group__text">INDICAR PARA AMIGO</span>
                     </a>
                 </div>
             </div>
             <div class="content df-fdcol-jcsb">
-                <div class="content__text-box">
+                <section class="content__section">
                     <h1 class="color-header color-header_light-blue">Conteúdo relacionado</h1>
                     <div class="content__div df-fdcol-jcsa">
                         <p class="content__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum</p>
                         <p class="content__p">Vestibulum massa nisl, auctor in dictum at, gravida a arcu. Pellentesque vitae massa tincidunt nisi consequat</p>
                         <p class="content__p">Praesent lobortis ornare nisi non cursus. Nulla at gravida est. Integer ut nunc quam</p>
                     </div>
-                </div>
+                </section>
                 <div class="pagination df-jcsb">
                     <div class="pagination__select-box df-jcsb">
                         <span class="pagination__span">Página</span>
@@ -184,8 +188,8 @@
                     <a href="#" class="pagination__link"></a>
                 </div>
             </div>
-        </div>
-        <div class="main__right-side df-fdcol-jcsb">
+        </aside>
+        <aside class="aside-right df-fdcol-jcsb">
             <div class="login">
                 <h1 class="color-header color-header_purple">Informativo</h1>
                 <form action="#" class="login__form df-fdcol-jcsb">
@@ -198,26 +202,26 @@
             <div class="hints">
                 <h1 class="color-header color-header_pink">Dicas</h1>
                 <div class="tape df-fdcol-jcsb">
-                    <div class="tape__block df-jcsb">
+                    <section class="tape__section df-jcsb">
                         <span class="tape__span">1</span>
                         <p class="tape__p">Praesent lobortis ornare nisi non cursus. Nulla at gravida est. Integer ut nunc quam.</p>
-                    </div>
-                    <div class="tape__block df-jcsb">
+                    </section>
+                    <section class="tape__section df-jcsb">
                         <span class="tape__span">2</span>
                         <p class="tape__p">Fusce ligula neque, molestie eget porttitor ac, aliquet in magna. In sit amet lectus libero.</p>
-                    </div>
-                    <div class="tape__block df-jcsb">
+                    </section>
+                    <section class="tape__section df-jcsb">
                         <span class="tape__span">3</span>
                         <p class="tape__p">Aliquam consequat tempor mauris, sit amet interdum dolor.</p>
-                    </div>
-                    <div class="tape__block df-jcsb">
+                    </section>
+                    <section class="tape__section df-jcsb">
                         <span class="tape__span">4</span>
                         <p class="tape__p">Etiam adipiscing ornare quam vitae scelerisque. Proin dapibus fringilla arcu, eu molestie mi.</p>
-                    </div>
-                    <div class="tape__block df-jcsb">
+                    </section>
+                    <section class="tape__section df-jcsb">
                         <span class="tape__span">5</span>
                         <p class="tape__p">Integer tincidunt fringilla tellus varius porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris facilisis fringilla tristique.</p>
-                    </div>
+                    </section>
                     <a href="#" class="hints__link">» saiba mais</a>
                 </div>
             </div>
@@ -263,11 +267,11 @@
 					<a href="#" class="tags__link tags_font_14">saúde</a> 
 				</div>
             </div>
-        </div>
-    </div>
+        </aside>
+    </main>
     <footer class="footer df-fdcol">
         <div class="footer__logo"><img src="img/footer-logo.png" alt="footer-logo" class="footer__img"></div>
-        <div class="wrapper clearfix">
+        <div class="footer-wrapper">
             <div class="footer__block col-1">
                 <h3 class="footer__header">Home</h3>
                 <ul class="footer__ul">

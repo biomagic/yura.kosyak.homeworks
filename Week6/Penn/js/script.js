@@ -6,8 +6,8 @@
             i = 0;
             
             showPage = function(i){
-                $(tabs).children("div").children("div").hide();
-                $(tabs).children("div").children("div").eq(i).show();
+                $(tabs).children("div").children("article").hide();
+                $(tabs).children("div").children("article").eq(i).show();
                 $(tabs).children("ul").children("li").removeClass("active");
                 $(tabs).children("ul").children("li").eq(i).addClass("active");
             }

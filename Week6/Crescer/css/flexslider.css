@@ -3,6 +3,7 @@
   position: relative;
   overflow: hidden;
   z-index: 1;
+  width: 100%;
   left: -1px;
   background: #eee;
 }
@@ -14,16 +15,14 @@
   text-align: center;
   bottom: 0;
   background: rgba(0, 0, 0, .5);
-  display: flex;
-  align-self: center;
   padding: 14px 50px 13px;
+  display: flex;
   border-top-right-radius: 20px;
   z-index: 2;
   border-top-left-radius: 20px;
 }
 .flex-control-nav li {
   margin: 0 15px;
-  display: inline-block;
   zoom: 1;
 }
 .flex-control-paging li a {
@@ -53,9 +52,10 @@
 div.flexslider {
   border-radius: 7px;
   padding: 0;
+  align-items: center;
 }
 .flex-active-slide {
-  max-width: 613px;
+  max-width: 100%;
 }
 
 @media (max-width: 480px) {
@@ -70,4 +70,11 @@ div.flexslider {
         width: 15px;
         height: 15px;
     }
+}
+.slides {
+  width: 100%;
+}
+.my-video {
+  width: 100%;
+  height: 100%;
 }

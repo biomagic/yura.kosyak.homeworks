@@ -4,18 +4,18 @@
 	<meta charset="UTF-8">
 	<title>The new generation</title>
 	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="css/flex.css">
 	<link rel="stylesheet" href="css/stylename.css">
+	<link rel="stylesheet" href="css/styles.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script src="js/script.js"></script>
 </head>
 <body class="body">
 <div class="wrapper">
-	<div class="top df-jcsb">
+	<header class="top df-jcsb">
 		<div class="logo"><a href="#"><img src="img/logo.png" alt="logo" class="logo__img"></a></div>
-		<div class="login-box df-jccol">
-			<ul class="top__ul df-jcsb">
+		<div class="login-box">
+			<ul class="top__ul df">
 				<li class="top__li"><a href="#" class="top__link hover_color_1 bold">HOW IT WORKS</a></li>
 				<li class="top__li"><a href="#" class="top__link hover_color_1 bold">NEW TO VISALUS?</a></li>
 				<li class="top__li"><a href="#" class="top__link hover_color_1 bold">MEET ROBERT L. DEAN, JR.</a></li>
@@ -26,7 +26,7 @@
 				<button class="start-block__button">Start Challenge</button>
             </div>
 		</div>
-	</div>
+	</header>
 	<nav class="navigation df-jcfe">
 	    <ul class="navigation__menu">
 	        <li class="navigation__li">
@@ -65,10 +65,10 @@
 			<li class="pagination__li"><a class="pagination__link" href="#">Meet Robery L. Dean, Jr.</a></li>
 		</ul>
 	</div>
-	<div class="main df-jcsb">
-		<div class="left-block">
+	<main class="main df-jcsb">
+		<aside class="left-aside">
 			<div class="categories">
-				<h1 class="left-block__h1">About TNG</h1>
+				<h1 class="left-aside__h1">About TNG</h1>
 				<ul class="categories__ul">
 					<li class="categories__li dropdown"><a href="#" class="categories__link">OVERVIEW</a>
 						<ul class="submenu">
@@ -134,7 +134,7 @@
 			</div>
 			<div class="banner">
 				<div class="banner__top df">
-					<div><img src="img/visalus.png" alt="visalus" class="banner__img"></div>
+					<div class="banner__div df-aicenter"><img src="img/visalus.png" alt="visalus" class="banner__img"></div>
 					<h1 class="banner__h1">Make Money with Visalus</h1>
 				</div>
 				<div class="banner__bottom">
@@ -146,14 +146,14 @@
 					<p class="advertising__p">Sidebar Advertising Banner for TNG</p>
 				</div>
 			</div>		
-		</div>
-		<div class="right-block">
-			<div class="right-block__top df">
-				<h1 class="right-block__h1">We’re Creating a Culture of Healthy, Wealthy People.</h1>
+		</aside>
+		<aside class="right-aside">
+			<div class="right-aside__top df">
+				<h1 class="right-aside__h1">We’re Creating a Culture of Healthy, Wealthy People.</h1>
 			</div>
 			<div class="content df-jcsb">
-				<div class="content-left">
-					<div class="content-left__info">
+				<article class="content-article">
+					<section class="content-article__section">
 						<p class="content__p">
 							In our economoic state, sometimes it is easy to forget that it doesn’t matter how much money you earn, if you don’t have your health - none of it will matter.
 							<br>
@@ -167,8 +167,8 @@
 							<br>
 							  <span class="font_default">Founder &amp; Network Marketing Leader</span>
 						</p>
-					</div>
-					<div class="content-left__info">
+					</section>
+					<section class="content-article__section">
 						<br>
 						<h1 class="content__h1 bold">Why TOPGUN - The New Generation</h1>
 						<br>
@@ -180,11 +180,12 @@
 							<br>
 							<br>
 						</p>
-					</div>
-					<div class="content__p bold">
-						Join our challenge today and start making change in your life. Learn how to get started, <a href="#" class="content__link content_link_2">click here.</a>
-					</div>								
-				</div>
+					</section>
+					<section class="content-article__section bold">
+						Join our challenge today and start making change in your life. Learn how to get started, 
+						<a href="#" class="content__link content_link_2">click here.</a>
+					</section>								
+				</article>
 				<div class="content-right">
 					<div class="image-box">
 						<img src="img/content-human.png" alt="human" class="content__img">
@@ -220,11 +221,11 @@
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
+		</aside>
+	</main>
 	<footer class="footer">
 		<div class="footer-box">
-			<ul class="footer__ul df">
+			<ul class="footer__ul df-jcsb">
 				<li class="footer__li"><a href="#" class="footer__link hover_color_1 bold">Home</a></li>
 				<li class="footer__li"><a href="#" class="footer__link hover_color_1 bold">90 Day Challenge</a></li>
 				<li class="footer__li"><a href="#" class="footer__link hover_color_1 bold">About TNG</a></li>
